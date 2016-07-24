@@ -65,6 +65,30 @@ hr {
         .form {
             width: 100%;
             padding: 24px 12px 0;
+            position: relative;
+
+            .overlay {
+                width: 100%;
+                height: 100%;
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: transparent;
+                transition: background-color .3s;
+
+                &.active {
+                    background-color: transparentize(#fff, 0.05);
+                }
+                &::after {
+                    width: 200px;
+                    height: 200px;
+                    background-color: #000;
+                    position: absolute;
+                    top: calc(50% - 100px);
+                    left: calc(50% - 100px);
+                }
+            }
 
             .form-input {
                 width: 352px;

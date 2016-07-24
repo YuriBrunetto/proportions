@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="lib/jquery/jquery-3.1.0.min.js"></script>
+        <script src="dist/proportions.js"></script>
     </head>
 
     <body>
@@ -18,16 +19,18 @@
                 <section class="header-section">
                     <h2>Set your proportion</h2>
                     <hr>
-                    <form class="form">
-                        <input type="number" class="form-input" placeholder="Width (px)">
-                        <input type="number" class="form-input" placeholder="Height (px)">
+                    <form id="form-set" class="form">
+                        <input type="number" name="width" pattern="\d*" class="form-input" placeholder="Width (px)">
+                        <input type="number" name="height" pattern="\d*" class="form-input" placeholder="Height (px)">
 
                         <div class="clear-both"></div>
 
                         <div class="form-btns">
-                            <button type="button" class="button float-left">Make proportions</button>
-                            <button type="button" class="button float-right">Reset</button>
+                            <button type="submit" id="set-submit" class="button float-left">Make proportions</button>
+                            <button type="button" id="set-reset" class="button float-right">Reset</button>
                         </div>
+
+                        <div class="overlay"></div>
                     </form>
                 </section>
 
@@ -35,8 +38,8 @@
                     <h2>Use your proportion</h2>
                     <hr>
                     <form class="form">
-                        <input type="number" class="form-input" placeholder="Width (px)">
-                        <input type="number" class="form-input" placeholder="Height (px)">
+                        <input type="number" pattern="\d*" class="form-input" placeholder="Width (px)">
+                        <input type="number" pattern="\d*" class="form-input" placeholder="Height (px)">
 
                         <div class="clear-both"></div>
                     </form>

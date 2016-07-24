@@ -1,1 +1,1 @@
-$(function(){});
+$(function(){var t=0,e=0;$("#form-set").on("submit",function(n){n.preventDefault(),$(".overlay").show(0,function(){$(this).addClass("active")}),t=$("input[name='width']").val(),e=$("input[name='height']").val(),proportion=t/e}),$("#set-reset").click(function(){$("#form-set")[0].reset()})});
